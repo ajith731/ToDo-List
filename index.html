@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoList</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--  Favicon -->
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3237/3237472.png">
+  <style>
+    body {
+      background-color: rgb(188, 42, 93);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+  
+  <!-- White Box -->
+  <div class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg p-6 w-4/5">
+    
+    <div class="w-full flex items-center justify-center mb-6">
+      <img src="./to-do-list.png" width="50" alt="Logo" class="mr-3">
+      <h1 class="text-3xl font-bold text-gray-800">My Todo List</h1>
+    </div>
+
+    <div class="md:w-2/5 flex justify-center mb-4 md:mb-0">
+      <img src="./8kdb39e5o0n7ocjtpfrvduecsd.png" alt="Todo Icon" class="w-40">
+    </div>
+    
+    <div class="md:w-3/5 w-full">
+      <form class="flex items-center">
+        <!-- Input box -->
+        <input id="taskInput"
+          type="text" 
+          placeholder="Enter task..." 
+          required
+          class="flex-grow p-3 rounded-l-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+        
+        <!-- Add Button -->
+        <button onclick="addTask()" type="button" 
+                class="bg-black-500 p-3 rounded-r-lg hover:bg-pink-500 flex items-center justify-center">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/992/992651.png" 
+            alt="Add" 
+            class="w-10 h-10"> 
+        </button>
+      </form>
+
+      <!-- Task List -->
+      <ul id="taskList" class="mt-4 space-y-2"></ul>
+    </div>
+  </div>
+
+</body>
+<script src="./script.js"></script>
+</html>
