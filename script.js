@@ -27,20 +27,35 @@ function addTask() {
 
 // ......------------------------------------editTask--------------------------
 
+
+
+
+
+
+
 function editTask(button) {
-  console.log(button);
-    li = button.parentNode
-console.log(li);
-console.log(li.childNodes[2]);
-currentText=li.childNodes[2].textContent
-console.log(currentText);
- newText=prompt("enter task",currentText)
+  let li = button.parentNode;
 
-if(newText){
-  li.childNodes[2].textContent=newText
+ 
+  let currentTask = li.querySelector(".task-text").textContent;
+
+  
+  let newTask = prompt("Enter newTask:", currentTask);
+
+  
+  if (newTask) {
+    li.querySelector(".task-text").textContent = newTask;
+  }
+  
 }
 
-}
+
+
+
+
+
+
+
 
 // --------------------------deleteTask---------------------------------------
 
